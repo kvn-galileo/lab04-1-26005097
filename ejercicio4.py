@@ -14,9 +14,16 @@ valid_lenght = False
 has_vowels = False
 has_digits = False
 
-message = f"""
-  (1) Tener por lo menos 8 caracteres [{valid_lenght}]
-  (2) Contenga mas de una vocal       [{has_vowels}]
-  (3) Contenga mas de un digito       [{has_digits}]
-"""
+validations = not valid_lenght and not has_vowels and not has_digits
+
+while validations:
+    veryfication_message = f"""
+      (1) Tener por lo menos 8 caracteres [{valid_lenght}]
+      (2) Contenga mas de una vocal       [{has_vowels}]
+      (3) Contenga mas de un digito       [{has_digits}]
+    """    
+    print("Type a string password: ")
+
+
+
 print(message)
