@@ -36,7 +36,10 @@ while True:
     valid_length = len(password) >= 8
 
     str_count = 0
-    for letter in password:
+
+    index = 0
+    while index <= len(password) - 1:
+      letter = password[index]
       lower_vowel = letter.lower()
       
       if lower_vowel == 'a' or lower_vowel == 'e' or lower_vowel == 'i' or lower_vowel == 'o' or lower_vowel == 'u':
@@ -45,19 +48,27 @@ while True:
       if (str_count > 1):
         has_vowels = True
         break
+
+      index += 1
+      
+    
     
     if str_count <= 1:
       has_vowels = False
 
 
     digit_count = 0
-    for letter in password:
+    index = 0
+    while index <= len(password) - 1:
+      letter = password[index]
       if letter.isdigit():
         digit_count += 1
       
       if digit_count > 1:
         has_digits = True
         break
+      
+      index += 1
     
     if digit_count <= 1:
       has_digits = False
