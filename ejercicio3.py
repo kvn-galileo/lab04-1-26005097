@@ -13,7 +13,7 @@
 import random
 import math
 
-battery = 100
+battery = 100e
 iterations = 0
 
 print("lost: %", 0, "current: %", battery)
